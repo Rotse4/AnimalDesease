@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
 void _scrollListener() {
   setState(() {
     final screenWidth = MediaQuery.of(context).size.width;
-    final itemWidth = 60.0; // Width of each item in the ListView
+    final itemWidth = 90.0; // Width of each item in the ListView
     final viewportFraction = screenWidth / itemWidth;
     _currentIndex = (_controller.offset / itemWidth) / viewportFraction;
   });
@@ -95,12 +95,12 @@ void _scrollListener() {
               ),
             ),
             Container(
-              height: 150,
+              height: 400,
               // color: Colors.greenAccent,
               child: ListView.builder(
                   controller: _controller,
                   itemCount: items.length,
-                  scrollDirection: Axis.horizontal,
+                  // scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return Column(
                       children: [
@@ -120,10 +120,10 @@ void _scrollListener() {
                   }),
             ),
             new DotsIndicator(
-              dotsCount: items.length,
+              dotsCount: 4,
               position: _currentIndex,
               decorator: DotsDecorator(
-                color: Colors.black87, // Inactive color
+                color: Colors.white, // Inactive color
                 activeColor: Colors.redAccent,
               ),
             )

@@ -1,4 +1,6 @@
 import 'package:cattle_desease/dots.dart';
+import 'package:cattle_desease/ldotList.dart';
+import 'package:cattle_desease/prac.dart';
 import 'package:flutter/material.dart';
 
 import 'home page.dart';
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  MyApps(),
+      home:  MySelectOptions(),
     );
   }
 }
