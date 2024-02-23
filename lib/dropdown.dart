@@ -34,22 +34,83 @@ class _DropDownState extends State<DropDown> {
         padding: EdgeInsets.only(top: 40),
         child: Column(
           children: [
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 42,
+                    width: 42,
+                    child: Center(
+                        child: Text(
+                      "EK",
+                      style: TextStyle(fontSize: 20, color: Colors.orange),
+                    )),
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 88, 85, 85),
+                        borderRadius: BorderRadius.circular(21)),
+                  ),
+                  Text(
+                    "Home",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                  Container(
+                    height: 42,
+                    width: 42,
+                    child: Icon(
+                      Icons.notifications_outlined,
+                      color: Colors.orange,
+                    ),
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 88, 85, 85),
+                        borderRadius: BorderRadius.circular(21)),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              child: Text(
+                "Choose your cattle symptoms",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
             for (int i = 0; i < 5; i++)
-              DropdownButton<String>(
-                value: symptomController.options['Symptom${i + 1}'], // Fetch value from the controller's map
-                onChanged: (String? newValue) {
-                  setState(() {
-                    // Update the corresponding option in the controller's map
-                    symptomController.options['Symptom${i + 1}'] = newValue ?? '';
-                    print(symptomController.options);
-                  });
-                },
-                items: options.map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                margin: EdgeInsets.symmetric(vertical: 20,horizontal: 10),
+                height: 70,
+                width: double.maxFinite,
+                child: DropdownButton<String>(
+                  padding: EdgeInsets.symmetric(horizontal: 30,vertical: 8),
+                  hint: Text("Choose"),
+                  // alignment: AlignmentDirectional.bottomCenter,
+                  value: symptomController.options['Symptom${i + 1}'], // Fetch value from the controller's map
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      // Update the corresponding option in the controller's map
+                      symptomController.options['Symptom${i + 1}'] = newValue ?? '';
+                      print(symptomController.options);
+                    });
+                  },
+                  items: options.map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
               ),
               GestureDetector(
                 onTap: (){
