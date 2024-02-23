@@ -14,7 +14,6 @@ class SymptomController extends GetxController {
   Future<void> detect() async {
     Response? response = await detectRepo.detectDesease(options);
     if (response?.statusCode == 200) {
-
       update();
     } else {
       print("User orders not found");
