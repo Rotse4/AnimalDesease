@@ -1,4 +1,5 @@
 import 'package:cattle_desease/controllers.dart';
+import 'package:cattle_desease/solution.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -112,15 +113,22 @@ class _DropDownState extends State<DropDown> {
                   }).toList(),
                 ),
               ),
+              SizedBox(
+                height: 90,
+              ),
               GestureDetector(
                 onTap: (){
                   symptomController.detect();
+                  Get.to(Solution());
                 },
                 child: Container(
-                  height: 40,
-                  width: 40,
-                  color: Colors.blue,
-                  
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 88, 85, 85),
+                    borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Center(child: Text("Predict", style: TextStyle(color: Colors.orange),)),
                 ),
               )
           ],

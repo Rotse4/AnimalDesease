@@ -3,6 +3,7 @@ import 'package:cattle_desease/dots.dart';
 import 'package:cattle_desease/dropdown.dart';
 import 'package:cattle_desease/ldotList.dart';
 import 'package:cattle_desease/prac.dart';
+import 'package:cattle_desease/solution.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cattle_desease/depandancies.dart'as dep;

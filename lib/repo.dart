@@ -20,3 +20,7 @@ class DetectRepo extends GetxService {
     return await apiClient.postData(AppConstants.BASE_URL, detect.toJson());
   }
 }
+
+class ResultRepo extends GetxService{
+  
+}

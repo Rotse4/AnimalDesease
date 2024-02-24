@@ -30,3 +30,26 @@ class Detect {
     return data;
   }
 }
+
+
+class Results {
+  String? dtPredict;
+  String? nbPredict;
+  String? rfPredict;
+
+  Results({this.dtPredict, this.nbPredict, this.rfPredict});
+
+  Results.fromJson(Map<String, dynamic> json) {
+    dtPredict = json['dt_predict'];
+    nbPredict = json['nb_predict'];
+    rfPredict = json['rf_predict'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['dt_predict'] = this.dtPredict;
+    data['nb_predict'] = this.nbPredict;
+    data['rf_predict'] = this.rfPredict;
+    return data;
+  }
+}
