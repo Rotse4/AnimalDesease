@@ -37,11 +37,32 @@ class _SolutionState extends State<Solution> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)),
                 child: ListView(
-                  padding: EdgeInsets.symmetric(vertical: 15),
+                  padding: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
                   children: [
-                    ListTile(title: Text(symptomController.linearRegression)),
-                    ListTile(title: Text(symptomController.randomForest)),
-                    ListTile(title: Text(symptomController.naiveBytes)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Linear Regresion :"),
+                        Text(symptomController.linearRegression)
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Random Forest :"),
+                        Text(symptomController.randomForest)
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Naive bytes :"),
+                        Text(symptomController.naiveBytes)
+                      ],
+                    ),
+                    // ListTile(title: Text(symptomController.linearRegression)),
+                    // ListTile(title: Text(symptomController.randomForest)),
+                    // ListTile(title: Text(symptomController.naiveBytes)),
               
                   ],
                 )),

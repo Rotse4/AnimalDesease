@@ -22,7 +22,7 @@ class SymptomController extends GetxController {
     }else{
       Response? response = await detectRepo.detectDesease(options);
       linearRegression= Results.fromJson(response?.body).dtPredict;
-      print(linearRegression);
+      // print(linearRegression);
       randomForest=Results.fromJson(response?.body).rfPredict;
       naiveBytes=Results.fromJson(response?.body).nbPredict;
 

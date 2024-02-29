@@ -11,8 +11,8 @@ class DetectRepo extends GetxService {
   Future<Response?> detectDesease(Map<String, dynamic> symptoms) async {
     var ndata = await apiClient.postData(AppConstants.DETECT_URI, symptoms);
     print(symptoms);
-    print("ndata ${ndata.statusCode}"); 
-    print("ndata ${ndata.body}"); 
+    // print("ndata ${ndata.statusCode}"); 
+    // print("ndata ${ndata.body}"); 
     return ndata;
   }
 

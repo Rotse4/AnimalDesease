@@ -13,19 +13,100 @@ class DropDown extends StatefulWidget {
 class _DropDownState extends State<DropDown> {
   SymptomController symptomController = Get.find();
 
-  List<String> options = ['anorexia','abdominal_pain','anaemia','abortions','acetone','aggression','arthrogyposis',
-    'ankylosis','anxiety','bellowing','blood_loss','blood_poisoning','blisters','colic','Condemnation_of_livers',
-    'coughing','depression','discomfort','dyspnea','dysentery','diarrhoea','dehydration','drooling',
-    'dull','decreased_fertility','diffculty_breath','emaciation','encephalitis','fever','facial_paralysis','frothing_of_mouth',
-    'frothing','gaseous_stomach','highly_diarrhoea','high_pulse_rate','high_temp','high_proportion','hyperaemia','hydrocephalus',
-    'isolation_from_herd','infertility','intermittent_fever','jaundice','ketosis','loss_of_appetite','lameness',
-    'lack_of-coordination','lethargy','lacrimation','milk_flakes','milk_watery','milk_clots',
-    'mild_diarrhoea','moaning','mucosal_lesions','milk_fever','nausea','nasel_discharges','oedema',
-    'pain','painful_tongue','pneumonia','photo_sensitization','quivering_lips','reduction_milk_vields','rapid_breathing',
-    'rumenstasis','reduced_rumination','reduced_fertility','reduced_fat','reduces_feed_intake','raised_breathing','stomach_pain',
-    'salivation','stillbirths','shallow_breathing','swollen_pharyngeal','swelling','saliva','swollen_tongue',
-    'tachycardia','torticollis','udder_swelling','udder_heat','udder_hardeness','udder_redness','udder_pain','unwillingness_to_move',
-    'ulcers','vomiting','weight_loss','weakness'];
+  List<String> options = [
+    'anorexia',
+    'abdominal_pain',
+    'anaemia',
+    'abortions',
+    'acetone',
+    'aggression',
+    'arthrogyposis',
+    'ankylosis',
+    'anxiety',
+    'bellowing',
+    'blood_loss',
+    'blood_poisoning',
+    'blisters',
+    'colic',
+    'Condemnation_of_livers',
+    'coughing',
+    'depression',
+    'discomfort',
+    'dyspnea',
+    'dysentery',
+    'diarrhoea',
+    'dehydration',
+    'drooling',
+    'dull',
+    'decreased_fertility',
+    'diffculty_breath',
+    'emaciation',
+    'encephalitis',
+    'fever',
+    'facial_paralysis',
+    'frothing_of_mouth',
+    'frothing',
+    'gaseous_stomach',
+    'highly_diarrhoea',
+    'high_pulse_rate',
+    'high_temp',
+    'high_proportion',
+    'hyperaemia',
+    'hydrocephalus',
+    'isolation_from_herd',
+    'infertility',
+    'intermittent_fever',
+    'jaundice',
+    'ketosis',
+    'loss_of_appetite',
+    'lameness',
+    'lack_of-coordination',
+    'lethargy',
+    'lacrimation',
+    'milk_flakes',
+    'milk_watery',
+    'milk_clots',
+    'mild_diarrhoea',
+    'moaning',
+    'mucosal_lesions',
+    'milk_fever',
+    'nausea',
+    'nasel_discharges',
+    'oedema',
+    'pain',
+    'painful_tongue',
+    'pneumonia',
+    'photo_sensitization',
+    'quivering_lips',
+    'reduction_milk_vields',
+    'rapid_breathing',
+    'rumenstasis',
+    'reduced_rumination',
+    'reduced_fertility',
+    'reduced_fat',
+    'reduces_feed_intake',
+    'raised_breathing',
+    'stomach_pain',
+    'salivation',
+    'stillbirths',
+    'shallow_breathing',
+    'swollen_pharyngeal',
+    'swelling',
+    'saliva',
+    'swollen_tongue',
+    'tachycardia',
+    'torticollis',
+    'udder_swelling',
+    'udder_heat',
+    'udder_hardeness',
+    'udder_redness',
+    'udder_pain',
+    'unwillingness_to_move',
+    'ulcers',
+    'vomiting',
+    'weight_loss',
+    'weakness'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +156,7 @@ class _DropDownState extends State<DropDown> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 20),
+              margin: EdgeInsets.only(top: 15),
               child: Text(
                 "Choose your cattle symptoms",
                 style: TextStyle(
@@ -87,21 +168,22 @@ class _DropDownState extends State<DropDown> {
             for (int i = 0; i < 5; i++)
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10)
-                ),
-                margin: EdgeInsets.symmetric(vertical: 20,horizontal: 10),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
+                margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                 height: 70,
                 width: double.maxFinite,
                 child: DropdownButton<String>(
-                  padding: EdgeInsets.symmetric(horizontal: 30,vertical: 8),
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 8),
                   hint: Text("Choose"),
                   // alignment: AlignmentDirectional.bottomCenter,
-                  value: symptomController.options['Symptom${i + 1}'], // Fetch value from the controller's map
+                  value: symptomController.options[
+                      'Symptom${i + 1}'], // Fetch value from the controller's map
                   onChanged: (String? newValue) {
                     setState(() {
                       // Update the corresponding option in the controller's map
-                      symptomController.options['Symptom${i + 1}'] = newValue ?? '';
+                      symptomController.options['Symptom${i + 1}'] =
+                          newValue ?? '';
                       print(symptomController.options);
                     });
                   },
@@ -113,24 +195,27 @@ class _DropDownState extends State<DropDown> {
                   }).toList(),
                 ),
               ),
-              SizedBox(
-                height: 90,
-              ),
-              GestureDetector(
-                onTap: (){
-                  symptomController.detect();
-                  Get.to(Solution());
-                },
-                child: Container(
-                  height: 70,
-                  width: 70,
-                  decoration: BoxDecoration(
+            SizedBox(
+              height: MediaQuery.of(context).size.height/10,
+            ),
+            GestureDetector(
+              onTap: () {
+                symptomController.detect();
+                Get.to(Solution());
+              },
+              child: Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
                     color: Color.fromARGB(255, 88, 85, 85),
-                    borderRadius: BorderRadius.circular(30)
-                  ),
-                  child: Center(child: Text("Predict", style: TextStyle(color: Colors.orange),)),
-                ),
-              )
+                    borderRadius: BorderRadius.circular(30)),
+                child: Center(
+                    child: Text(
+                  "Predict",
+                  style: TextStyle(color: Colors.orange),
+                )),
+              ),
+            )
           ],
         ),
       ),
