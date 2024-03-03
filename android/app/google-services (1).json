@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "616391659323",
+    "project_id": "cattlediseaseprediction",
+    "storage_bucket": "cattlediseaseprediction.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616391659323:android:3414f5ba80587615c9311e",
+        "android_client_info": {
+          "package_name": "com.example.cattle_desease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbLqD-U6WN8Z-1pXbq8SjL7C7B1a0DYUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
