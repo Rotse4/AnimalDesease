@@ -28,11 +28,15 @@ class _SignUpPageState extends State<SignUpPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 140,
+              height: 200,
             ),
             const Text(
-              '    SignUp',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+              '    Create Account',
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600,color: Colors.green),
+            ),
+            const Text(
+              '         Enter creditials to create account',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300,color: Colors.black),
             ),
             const SizedBox(
               height: 50,
@@ -54,7 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     hintText: "Enter Username",
                     prefixIcon: const Icon(
                       Icons.email,
-                      color: Colors.lightBlue,
+                      color: Colors.green,
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -82,7 +86,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     hintText: "Enter Email",
                     prefixIcon: const Icon(
                       Icons.email,
-                      color: Colors.lightBlue,
+                      color: Colors.green,
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -113,7 +117,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     hintText: "Enter Password",
                     prefixIcon: const Icon(
                       Icons.password,
-                      color: Colors.lightBlue,
+                      color: Colors.green,
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -135,7 +139,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   width: 160,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
-                    color: Colors.lightBlue
+                    color: Colors.green
                   ),
                   child: const Center(child: Text('Sign Up',style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.w700),)),
                  
@@ -155,7 +159,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     TextSpan(
                   text: "  Login",
                   style: const TextStyle(
-                    color: Colors.black,
+                    color: Colors.blue,
                     fontSize: 20,
                     fontWeight: FontWeight.bold
                   ),
@@ -164,10 +168,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ]
                 )),
               ),
-              const Image(
-                height: 280,
-                width: double.maxFinite,
-                image: AssetImage('assets/d.webp'))
+           
           ],
         ),
       ),

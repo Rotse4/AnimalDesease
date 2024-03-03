@@ -18,16 +18,18 @@ class LandingPage extends StatelessWidget {
               height: 160,
             ),
             const Center(
-                child: Text('Welcome to   ',
+                child: Text('The animal desease',
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
+                        color: Colors.green,
                         fontStyle: FontStyle.italic))),
             const Center(
-                child: Text('lms app',
+                child: Text('Prediction App ',
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
+                        color: Colors.green,
                         fontStyle: FontStyle.italic))),
             const SizedBox(
               height: 30,
@@ -35,7 +37,7 @@ class LandingPage extends StatelessWidget {
             const Image(
                 width: double.maxFinite,
                 height: 260,
-                image: AssetImage('assets/p.webp')),
+                image: AssetImage('assets/bb.webp')),
                 const SizedBox(height: 35,),
             GestureDetector(
               onTap: (){
@@ -46,7 +48,7 @@ class LandingPage extends StatelessWidget {
                 width: 160,
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                  color: Colors.lightBlue
+                  color: Colors.green
                 ),
                 child: const Center(child: Text('Login',style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.w700),)),
               

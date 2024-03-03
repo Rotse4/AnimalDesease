@@ -20,11 +20,15 @@ class LoginPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 140,
+              height: 200,
             ),
             const Text(
-              '    Login',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+              '    Welcome Back',
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600,color: Colors.green),
+            ),
+             const Text(
+              '       Enter your email and password',
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
             ),
             const SizedBox(
               height: 50,
@@ -46,7 +50,7 @@ class LoginPage extends StatelessWidget {
                     hintText: "Enter Email",
                     prefixIcon: const Icon(
                       Icons.email,
-                      color: Colors.lightBlue,
+                      color: Colors.green,
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -77,7 +81,7 @@ class LoginPage extends StatelessWidget {
                     hintText: "Enter Password",
                     prefixIcon: const Icon(
                       Icons.password,
-                      color: Colors.lightBlue,
+                      color: Colors.green,
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -99,7 +103,7 @@ class LoginPage extends StatelessWidget {
                   width: 160,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
-                    color: Colors.lightBlue
+                    color: Colors.green
                   ),
                   child: const Center(child: Text('Login',style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.w700),)),
                  
@@ -119,7 +123,7 @@ class LoginPage extends StatelessWidget {
                     TextSpan(
                   text: "  Create",
                   style: const TextStyle(
-                    color: Colors.black,
+                    color: Colors.blue,
                     fontSize: 20,
                     fontWeight: FontWeight.bold
                   ),
@@ -128,10 +132,7 @@ class LoginPage extends StatelessWidget {
                   ]
                 )),
               ),
-              const Image(
-                height: 400,
-                width: double.maxFinite,
-                image: AssetImage('assets/k.jpg'))
+             
           ],
         ),
       ),
