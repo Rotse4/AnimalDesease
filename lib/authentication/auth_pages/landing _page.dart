@@ -18,18 +18,18 @@ class LandingPage extends StatelessWidget {
               height: 160,
             ),
             const Center(
-                child: Text('The animal desease',
+                child: Text('Animal desease',
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
-                        color: Colors.green,
+                        color: Colors.orange,
                         fontStyle: FontStyle.italic))),
             const Center(
                 child: Text('Prediction App ',
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
-                        color: Colors.green,
+                        color: Colors.orange,
                         fontStyle: FontStyle.italic))),
             const SizedBox(
               height: 30,
@@ -48,7 +48,7 @@ class LandingPage extends StatelessWidget {
                 width: 160,
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                  color: Colors.green
+                  color: Colors.orange
                 ),
                 child: const Center(child: Text('Login',style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.w700),)),
               

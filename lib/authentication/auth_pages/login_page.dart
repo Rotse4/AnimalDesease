@@ -24,7 +24,7 @@ class LoginPage extends StatelessWidget {
             ),
             const Text(
               '    Welcome Back',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600,color: Colors.green),
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600,color: Colors.orange),
             ),
              const Text(
               '       Enter your email and password',
@@ -50,7 +50,7 @@ class LoginPage extends StatelessWidget {
                     hintText: "Enter Email",
                     prefixIcon: const Icon(
                       Icons.email,
-                      color: Colors.green,
+                      color: Colors.orange,
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -81,7 +81,7 @@ class LoginPage extends StatelessWidget {
                     hintText: "Enter Password",
                     prefixIcon: const Icon(
                       Icons.password,
-                      color: Colors.green,
+                      color: Colors.orange,
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -103,7 +103,7 @@ class LoginPage extends StatelessWidget {
                   width: 160,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
-                    color: Colors.green
+                    color: Colors.orange
                   ),
                   child: const Center(child: Text('Login',style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.w700),)),
                  

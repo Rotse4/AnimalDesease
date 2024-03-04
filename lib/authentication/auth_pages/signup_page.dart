@@ -32,7 +32,7 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             const Text(
               '    Create Account',
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600,color: Colors.green),
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600,color: Colors.orange),
             ),
             const Text(
               '         Enter creditials to create account',
@@ -58,7 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     hintText: "Enter Username",
                     prefixIcon: const Icon(
                       Icons.email,
-                      color: Colors.green,
+                      color: Colors.orange,
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -86,7 +86,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     hintText: "Enter Email",
                     prefixIcon: const Icon(
                       Icons.email,
-                      color: Colors.green,
+                      color: Colors.orange,
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -117,7 +117,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     hintText: "Enter Password",
                     prefixIcon: const Icon(
                       Icons.password,
-                      color: Colors.green,
+                      color: Colors.orange,
                     ),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -139,7 +139,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   width: 160,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
-                    color: Colors.green
+                    color: Colors.orange
                   ),
                   child: const Center(child: Text('Sign Up',style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.w700),)),
                  

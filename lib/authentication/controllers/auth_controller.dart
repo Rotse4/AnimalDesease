@@ -1,4 +1,5 @@
 
+import 'package:cattle_desease/dropdown.dart';
 import 'package:cattle_desease/home%20page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -78,7 +79,7 @@ class AuthController extends GetxController {
       await Future.delayed(Duration(seconds: 1));
 
       // Proceed to the home page with the username
-      Get.off(() => HomePage());
+      Get.off(() => DropDown());
       
     } catch (e) {
       EasyLoading.dismiss(); 
@@ -135,7 +136,7 @@ class AuthController extends GetxController {
       );
 
       // Proceed to the home page with the username
-      Get.off(() => HomePage());
+      Get.off(() => DropDown());
       
     } catch (e) {
 

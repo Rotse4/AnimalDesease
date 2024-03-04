@@ -1,4 +1,5 @@
 import 'package:cattle_desease/controllers.dart';
+import 'package:cattle_desease/map_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -72,54 +73,57 @@ class _SolutionState extends State<Solution> {
                 );
                 },)),
                  Text("Visit The nearest vateran", style: TextStyle(color: Colors.orange, fontSize: 18),),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 15),
-                  padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-                  height: 400,
-                  width: double.maxFinite,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10)
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(Icons.location_pin, color: Colors.blue,),
-                        Text("20KM"),
-                        SizedBox(width: 30,),
-                        Text("Josh Vet", style: TextStyle(fontSize: 20),)
-                      ],
-                     ),Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(Icons.location_pin, color: Colors.blue,),
-                        Text("20KM"),
-                        SizedBox(width: 30,),
-                        Text("Josh Vet", style: TextStyle(fontSize: 20),)
-                      ],
-                     ), 
-                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(Icons.location_pin, color: Colors.blue,),
-                        Text("20KM"),
-                        SizedBox(width: 30,),
-                        Text("Josh Vet", style: TextStyle(fontSize: 20),)
-                      ],
-                     ),
-                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(Icons.location_pin, color: Colors.blue,),
-                        Text("20KM"),
-                        SizedBox(width: 30,),
-                        Text("Josh Vet", style: TextStyle(fontSize: 20),)
-                      ],
-                     )
-                    ],
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                    // height: 400,
+                    width: double.maxFinite,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: MapPage(),
+                    // child: Column(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    //   children: [
+                    //    Row(
+                    //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //     children: [
+                    //       Icon(Icons.location_pin, color: Colors.blue,),
+                    //       Text("20KM"),
+                    //       SizedBox(width: 30,),
+                    //       Text("Josh Vet", style: TextStyle(fontSize: 20),)
+                    //     ],
+                    //    ),Row(
+                    //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //     children: [
+                    //       Icon(Icons.location_pin, color: Colors.blue,),
+                    //       Text("20KM"),
+                    //       SizedBox(width: 30,),
+                    //       Text("Josh Vet", style: TextStyle(fontSize: 20),)
+                    //     ],
+                    //    ), 
+                    //    Row(
+                    //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //     children: [
+                    //       Icon(Icons.location_pin, color: Colors.blue,),
+                    //       Text("20KM"),
+                    //       SizedBox(width: 30,),
+                    //       Text("Josh Vet", style: TextStyle(fontSize: 20),)
+                    //     ],
+                    //    ),
+                    //    Row(
+                    //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //     children: [
+                    //       Icon(Icons.location_pin, color: Colors.blue,),
+                    //       Text("20KM"),
+                    //       SizedBox(width: 30,),
+                    //       Text("Josh Vet", style: TextStyle(fontSize: 20),)
+                    //     ],
+                    //    )
+                    //   ],
+                    // ),
                   ),
                 )
           ],
