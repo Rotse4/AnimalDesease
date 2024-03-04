@@ -36,7 +36,11 @@ class _SolutionState extends State<Solution> {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)),
-                child: ListView(
+                child: GetBuilder<SymptomController>(builder: (detected){
+                  return symptomController.options.isEmpty? Container(
+                    child: Center(child: Text("Loading...")),
+                  ):ListView(
+                    
                   padding: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
                   children: [
                     Row(
@@ -65,10 +69,12 @@ class _SolutionState extends State<Solution> {
                     // ListTile(title: Text(symptomController.naiveBytes)),
               
                   ],
-                )),
+                );
+                },)),
                  Text("Visit The nearest vateran", style: TextStyle(color: Colors.orange, fontSize: 18),),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 15),
+                  padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                   height: 400,
                   width: double.maxFinite,
                   decoration: BoxDecoration(
@@ -76,8 +82,43 @@ class _SolutionState extends State<Solution> {
                     borderRadius: BorderRadius.circular(10)
                   ),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                     
+                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.location_pin, color: Colors.blue,),
+                        Text("20KM"),
+                        SizedBox(width: 30,),
+                        Text("Josh Vet", style: TextStyle(fontSize: 20),)
+                      ],
+                     ),Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.location_pin, color: Colors.blue,),
+                        Text("20KM"),
+                        SizedBox(width: 30,),
+                        Text("Josh Vet", style: TextStyle(fontSize: 20),)
+                      ],
+                     ), 
+                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.location_pin, color: Colors.blue,),
+                        Text("20KM"),
+                        SizedBox(width: 30,),
+                        Text("Josh Vet", style: TextStyle(fontSize: 20),)
+                      ],
+                     ),
+                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.location_pin, color: Colors.blue,),
+                        Text("20KM"),
+                        SizedBox(width: 30,),
+                        Text("Josh Vet", style: TextStyle(fontSize: 20),)
+                      ],
+                     )
                     ],
                   ),
                 )
