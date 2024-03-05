@@ -17,7 +17,7 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   
   Location _locationController = new Location();
-
+  
   static const LatLng _pGooglePlex = LatLng(0.1264226, 37.7209075);
   static const LatLng _pApplePark = LatLng(1.1264226, 37.7209075);
   LatLng? _currentP =null;
@@ -31,10 +31,11 @@ class _MapPageState extends State<MapPage> {
 
   @override
   Widget build(BuildContext context) {
+    print("heght" "${MediaQuery.of(context).size.height*0.5}");
     return Scaffold(
       body: Column(
         children: [
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height*0.5,
             // width: 4,
             child: GoogleMap(initialCameraPosition: CameraPosition(target: _pGooglePlex,zoom: 14),
