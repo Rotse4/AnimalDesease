@@ -1,4 +1,5 @@
 import 'package:cattle_desease/controllers.dart';
+import 'package:cattle_desease/diagnose.dart';
 import 'package:cattle_desease/map_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -38,44 +39,50 @@ class _SolutionState extends State<Solution> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)),
                 child: GetBuilder<SymptomController>(builder: (detected){
-                  return symptomController.options.isEmpty? Container(
-                    child: Center(child: Text("Loading...")),
-                  ):ListView(
-                    
-                  padding: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("Linear Regresion :"),
-                        Text(symptomController.linearRegression)
-                      ],
+                  return symptomController.options.isEmpty? GestureDetector(
+                    onTap: () => Get.to(Diagnose()),
+                    child: Container(
+                      child: Center(child: Text("Loading...")),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("Random Forest :"),
-                        Text(symptomController.randomForest)
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("Naive bytes :"),
-                        Text(symptomController.naiveBytes)
-                      ],
-                    ),
-                    // ListTile(title: Text(symptomController.linearRegression)),
-                    // ListTile(title: Text(symptomController.randomForest)),
-                    // ListTile(title: Text(symptomController.naiveBytes)),
-              
-                  ],
-                );
+                  ):GestureDetector(
+                    onTap: () => Get.to(Diagnose()),
+                    child: ListView(
+                      
+                    padding: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("Linear Regresion :"),
+                          Text(symptomController.linearRegression)
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("Random Forest :"),
+                          Text(symptomController.randomForest)
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("Naive bytes :"),
+                          Text(symptomController.naiveBytes)
+                        ],
+                      ),
+                      // ListTile(title: Text(symptomController.linearRegression)),
+                      // ListTile(title: Text(symptomController.randomForest)),
+                      // ListTile(title: Text(symptomController.naiveBytes)),
+                                  
+                    ],
+                                    ),
+                  );
                 },)),
                  Text("Visit The nearest vateran", style: TextStyle(color: Colors.orange, fontSize: 18),),
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 15),
+                    margin: EdgeInsets.only(right: 15, left: 15, bottom: 20),
                     padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                     // height: 400,
                     width: double.maxFinite,

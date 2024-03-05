@@ -7,7 +7,7 @@ class DetectRepo extends GetxService {
   final ApiClient apiClient;
   DetectRepo({required this.apiClient});
 
-  Future<Response?> detectDesease(Map<String, dynamic> symptoms) async {
+  Future<Response?> detectDesease(Map<dynamic, dynamic> symptoms) async {
     var ndata = await apiClient.postData(AppConstants.DETECT_URI, symptoms);
     print(symptoms);
     // print("ndata ${ndata.statusCode}");

@@ -14,7 +14,7 @@ class SymptomController extends GetxController {
   var randomForest;
   
   
-  Map<String, dynamic> options = {};
+  Map<dynamic, dynamic> options = {};
  
   Future<void> detect() async {
     if (options.length < 5) {

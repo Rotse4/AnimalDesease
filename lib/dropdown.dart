@@ -1,4 +1,5 @@
 import 'package:cattle_desease/controllers.dart';
+import 'package:cattle_desease/profile.dart';
 import 'package:cattle_desease/solution.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -121,17 +122,22 @@ class _DropDownState extends State<DropDown> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: 42,
-                    width: 42,
-                    child: Center(
-                        child: Text(
-                      "EK",
-                      style: TextStyle(fontSize: 20, color: Colors.orange),
-                    )),
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 88, 85, 85),
-                        borderRadius: BorderRadius.circular(21)),
+                  GestureDetector(
+                    onTap: ()  {
+                      Get.to(Profile());
+                    },
+                    child: Container(
+                      height: 42,
+                      width: 42,
+                      child: Center(
+                          child: Text(
+                        "EK",
+                        style: TextStyle(fontSize: 20, color: Colors.orange),
+                      )),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 88, 85, 85),
+                          borderRadius: BorderRadius.circular(21)),
+                    ),
                   ),
                   Text(
                     "Home",
@@ -171,7 +177,7 @@ class _DropDownState extends State<DropDown> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)),
                 margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-                height: 70,
+                height: 55,
                 width: double.maxFinite,
                 child: DropdownButton<String>(
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 8),

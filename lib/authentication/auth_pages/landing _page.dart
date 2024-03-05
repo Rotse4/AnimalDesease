@@ -18,7 +18,7 @@ class LandingPage extends StatelessWidget {
               height: 160,
             ),
             const Center(
-                child: Text('Animal desease',
+                child: Text('Cattle disease',
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
