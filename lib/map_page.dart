@@ -2,6 +2,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -31,13 +32,12 @@ class _MapPageState extends State<MapPage> {
 
   @override
   Widget build(BuildContext context) {
-    print("heght" "${MediaQuery.of(context).size.height*0.5}");
+    // print("heght" "${MediaQuery.of(context).size.height*0.5}");
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height*0.5,
-            // width: 4,
+          Expanded(
+            // height: MediaQuery.of(context).size.height*0.5,
             child: GoogleMap(initialCameraPosition: CameraPosition(target: _pGooglePlex,zoom: 14),
             markers:{
               Marker(markerId: MarkerId("_currentLocation"), icon: BitmapDescriptor.defaultMarker,
@@ -47,7 +47,6 @@ class _MapPageState extends State<MapPage> {
             } ,
             ),
           ),
-
         ],
       ),
     );

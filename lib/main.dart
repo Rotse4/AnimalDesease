@@ -2,6 +2,7 @@ import 'package:cattle_desease/authentication/auth_pages/landing%20_page.dart';
 import 'package:cattle_desease/authentication/controllers/auth_controller.dart';
 import 'package:cattle_desease/controllers.dart';
 import 'package:cattle_desease/dropdown.dart';
+import 'package:cattle_desease/map_page.dart';
 import 'package:cattle_desease/profile.dart';
 
 import 'package:firebase_core/firebase_core.dart';
