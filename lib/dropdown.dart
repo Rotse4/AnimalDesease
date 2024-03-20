@@ -150,9 +150,12 @@ class _DropDownState extends State<DropDown> {
                   Container(
                     height: 42,
                     width: 42,
-                    child: Icon(
-                      Icons.notifications_outlined,
-                      color: Colors.orange,
+                    child: GestureDetector(
+                      onTap: () => Get.to(Notification),
+                      child: Icon(
+                        Icons.notifications_outlined,
+                        color: Colors.orange,
+                      ),
                     ),
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 88, 85, 85),
