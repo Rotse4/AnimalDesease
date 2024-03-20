@@ -1,7 +1,9 @@
 import 'package:cattle_desease/controllers.dart';
+import 'package:cattle_desease/notifications.dart';
 import 'package:cattle_desease/profile.dart';
 import 'package:cattle_desease/solution.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class DropDown extends StatefulWidget {
@@ -147,19 +149,19 @@ class _DropDownState extends State<DropDown> {
                       fontSize: 16,
                     ),
                   ),
-                  Container(
-                    height: 42,
-                    width: 42,
-                    child: GestureDetector(
-                      onTap: () => Get.to(Notification),
+                  GestureDetector(
+                    onTap: () => Get.to(Notifications()),
+                    child: Container(
+                      height: 42,
+                      width: 42,
                       child: Icon(
                         Icons.notifications_outlined,
                         color: Colors.orange,
                       ),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 88, 85, 85),
+                          borderRadius: BorderRadius.circular(21)),
                     ),
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 88, 85, 85),
-                        borderRadius: BorderRadius.circular(21)),
                   ),
                 ],
               ),
