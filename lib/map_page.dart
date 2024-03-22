@@ -1,9 +1,5 @@
 
-import 'dart:ffi';
 
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
@@ -38,11 +34,11 @@ class _MapPageState extends State<MapPage> {
         children: [
           Expanded(
             // height: MediaQuery.of(context).size.height*0.5,
-            child: GoogleMap(initialCameraPosition: CameraPosition(target: _pGooglePlex,zoom: 14),
+            child: GoogleMap(initialCameraPosition: const CameraPosition(target: _pGooglePlex,zoom: 14),
             markers:{
-              Marker(markerId: MarkerId("_currentLocation"), icon: BitmapDescriptor.defaultMarker,
+              Marker(markerId: const MarkerId("_currentLocation"), icon: BitmapDescriptor.defaultMarker,
               position: _currentP??_pGooglePlex),
-               Marker(markerId: MarkerId("_destinationLocation"), icon: BitmapDescriptor.defaultMarker,
+               const Marker(markerId: MarkerId("_destinationLocation"), icon: BitmapDescriptor.defaultMarker,
               position: _pApplePark)
             } ,
             ),

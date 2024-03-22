@@ -1,11 +1,8 @@
-import 'dart:ffi';
 
 import 'package:cattle_desease/controllers.dart';
 import 'package:cattle_desease/diagnose.dart';
 import 'package:cattle_desease/map_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class Solution extends StatefulWidget {
@@ -28,11 +25,11 @@ class _SolutionState extends State<Solution> {
     return Scaffold(
       body: Container(
         color: Colors.grey,
-        padding: EdgeInsets.only(top: 50),
+        padding: const EdgeInsets.only(top: 50),
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -44,13 +41,13 @@ class _SolutionState extends State<Solution> {
                       // color: const Color.fromARGB(255, 211, 167, 167),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        color: Color.fromARGB(255, 217, 209, 209)
+                        color: const Color.fromARGB(255, 217, 209, 209)
                       ),
-                      child: Icon(Icons.arrow_back),
+                      child: const Icon(Icons.arrow_back),
                     ),
                   ),
                   
-                  Text(
+                  const Text(
                     "Probable Desease",
                     style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
                   )
@@ -58,7 +55,7 @@ class _SolutionState extends State<Solution> {
               ),
             ),
             Container(
-                margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 height: 200,
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -70,20 +67,20 @@ class _SolutionState extends State<Solution> {
                         ? GestureDetector(
                             onTap: () => Get.to(Diagnose()),
                             child: Container(
-                              child: Center(child: Text("Loading...")),
+                              child: const Center(child: Text("Loading...")),
                             ),
                           )
                         : GestureDetector(
                             onTap: () => Get.to(Diagnose()),
                             child: ListView(
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   vertical: 15, horizontal: 20),
                               children: [
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Linear Regresion :"),
+                                    const Text("Linear Regresion :"),
                                     Text(symptomController.linearRegression)
                                   ],
                                 ),
@@ -91,7 +88,7 @@ class _SolutionState extends State<Solution> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Random Forest :"),
+                                    const Text("Random Forest :"),
                                     Text(symptomController.randomForest)
                                   ],
                                 ),
@@ -99,7 +96,7 @@ class _SolutionState extends State<Solution> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Naive bytes :"),
+                                    const Text("Naive bytes :"),
                                     Text(symptomController.naiveBytes)
                                   ],
                                 ),
@@ -111,14 +108,14 @@ class _SolutionState extends State<Solution> {
                           );
                   },
                 )),
-            Text(
+            const Text(
               "Diagnoses",
               style: TextStyle(color: Colors.orange, fontSize: 18),
             ),
             Expanded(
               child: Container(
-                  margin: EdgeInsets.only(right: 15, left: 15, bottom: 20),
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  margin: const EdgeInsets.only(right: 15, left: 15, bottom: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                   // height: 400,
                   width: double.maxFinite,
                   decoration: BoxDecoration(
@@ -132,12 +129,12 @@ class _SolutionState extends State<Solution> {
                           Container(
                             child: Text(
                               "${symptomController.linearRegression} Diagnosis",
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 15),
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 5),
                             height: 90,
                             width: double.maxFinite,
@@ -157,12 +154,12 @@ class _SolutionState extends State<Solution> {
                           Container(
                             child: Text(
                               "${symptomController.randomForest} Diagnosis",
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 15),
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 5),
                             height: 90,
                             width: double.maxFinite,
@@ -182,12 +179,12 @@ class _SolutionState extends State<Solution> {
                           Container(
                             child: Text(
                               "${symptomController.naiveBytes} Diagnosis",
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 15),
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 5),
                             height: 90,
                             width: double.maxFinite,
@@ -204,14 +201,14 @@ class _SolutionState extends State<Solution> {
                         ],
                       ),
                       GestureDetector(
-                        onTap: () => Get.to(MapPage()),
+                        onTap: () => Get.to(const MapPage()),
                         child: Container(
                           height: 40,
                           width: 100,
                           decoration: BoxDecoration(
                               color: Colors.orange,
                               borderRadius: BorderRadius.circular(20)),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Nearest Vet",
                               style: TextStyle(color: Colors.white),

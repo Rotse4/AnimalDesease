@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
@@ -44,8 +43,8 @@ void _scrollListener() {
         body: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 30, left: 15, right: 15),
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              margin: const EdgeInsets.only(top: 30, left: 15, right: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               height: 100,
               width: double.infinity,
               child: Row(
@@ -54,16 +53,16 @@ void _scrollListener() {
                   Container(
                     height: 42,
                     width: 42,
-                    child: Center(
+                    child: const Center(
                         child: Text(
                       "EK",
                       style: TextStyle(fontSize: 20, color: Colors.orange),
                     )),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 88, 85, 85),
+                        color: const Color.fromARGB(255, 88, 85, 85),
                         borderRadius: BorderRadius.circular(21)),
                   ),
-                  Text(
+                  const Text(
                     "Home",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -74,19 +73,19 @@ void _scrollListener() {
                   Container(
                     height: 42,
                     width: 42,
-                    child: Icon(
+                    child: const Icon(
                       Icons.notifications_outlined,
                       color: Colors.orange,
                     ),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 88, 85, 85),
+                        color: const Color.fromARGB(255, 88, 85, 85),
                         borderRadius: BorderRadius.circular(21)),
                   ),
                 ],
               ),
             ),
             Container(
-              child: Text(
+              child: const Text(
                 "what's your cattle symptoms",
                 style: TextStyle(
                     color: Colors.white,
@@ -105,24 +104,24 @@ void _scrollListener() {
                     return Column(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(
+                          margin: const EdgeInsets.symmetric(
                               horizontal: 10, vertical: 25),
                           height: 60,
                           width: 60,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10)),
-                          child: Center(child: Text("JK")),
+                          child: const Center(child: Text("JK")),
                         ),
-                        Text("Fever")
+                        const Text("Fever")
                       ],
                     );
                   }),
             ),
-            new DotsIndicator(
+            DotsIndicator(
               dotsCount: 4,
               position: _currentIndex,
-              decorator: DotsDecorator(
+              decorator: const DotsDecorator(
                 color: Colors.white, // Inactive color
                 activeColor: Colors.redAccent,
               ),

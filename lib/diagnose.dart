@@ -1,6 +1,4 @@
-import 'package:cattle_desease/controllers.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class Diagnose extends StatefulWidget {
   // SymptomController symptomController = Get.find();
@@ -49,7 +47,7 @@ class _DiagnoseState extends State<Diagnose> {
               child: ListView(
                           
                         padding: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
-                        children: [
+                        children: const [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
