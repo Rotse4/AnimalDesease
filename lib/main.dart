@@ -15,10 +15,10 @@ Future<void> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: const FirebaseOptions(
-    apiKey: 'AIzaSyCbLqD-U6WN8Z-1pXbq8SjL7C7B1a0DYUc', 
-    appId: '1:616391659323:android:3414f5ba80587615c9311e', 
-    messagingSenderId:  '616391659323	',
-    projectId: 'cattlediseaseprediction'
+    apiKey: 'AIzaSyCnVRreoNGeTYhib1ACe-DV0Kji4AWDPqY', 
+    appId: '1:155725520547:android:a76389178cb7705dfd2916', 
+    messagingSenderId:  '155725520547	',//tutnatoa kwa firebase cloud messaging
+    projectId: 'cattle-disease-prediction'
     )).then((value) => Get.put(AuthController()));
   runApp(const MyApp());
 }
