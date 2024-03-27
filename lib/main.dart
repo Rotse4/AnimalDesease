@@ -1,6 +1,7 @@
 import 'package:cattle_desease/authentication/auth_pages/landing%20_page.dart';
 import 'package:cattle_desease/authentication/controllers/auth_controller.dart';
 import 'package:cattle_desease/controllers.dart';
+import 'package:cattle_desease/dropdown.dart';
 
 
 import 'package:firebase_core/firebase_core.dart';
@@ -39,8 +40,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  LandingPage(),
-      // home: DropDown(),
+      // home:  LandingPage(),
+      home: DropDown(),
     );
   }
 }

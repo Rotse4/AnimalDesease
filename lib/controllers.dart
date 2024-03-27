@@ -1,6 +1,7 @@
 import 'package:cattle_desease/model.dart';
 import 'package:cattle_desease/repo.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SymptomController extends GetxController {
   final DetectRepo detectRepo;
@@ -12,7 +13,8 @@ class SymptomController extends GetxController {
   var naiveBytes;
   var randomForest;
   Map<String, String> myMap = {
-    'schmallen_berg_virus': 'Malformations affecting calves exposed to the virus in pregnancy may lead to calving difficulties. Excessive force must not be used as this may risk injury to both the cow and calf.',
+    'schmallen_berg_virus':
+        'Malformations affecting calves exposed to the virus in pregnancy may lead to calving difficulties. Excessive force must not be used as this may risk injury to both the cow and calf.',
     'Bovine Respiratory Disease (BRD)':
         '\ufeffCeftiofur (Excede)\xa0Chlortetracycline (Aureomycin)\xa0Chlortetracycline/sulfamethazine (AS-700)',
     'Mastitis': 'Penicillin, Ampicillin, Tetracyclin or Gentamycin',
@@ -69,6 +71,7 @@ class SymptomController extends GetxController {
   };
 
   Map<dynamic, dynamic> options = {};
+  List<String> predicted=[];
 
   Future<void> detect() async {
     if (options.length < 5) {
@@ -79,35 +82,32 @@ class SymptomController extends GetxController {
       randomForest = Results.fromJson(response?.body).rfPredict;
       naiveBytes = Results.fromJson(response?.body).nbPredict;
       // naiveBytes = "Mastitis";
+      predicted.add(linearRegression);
+      predicted.add(randomForest);
+      predicted.add(naiveBytes);
+      print("predicted ${predicted.toString()}");
+      await savePredictionData(predicted.toString());
 
-      String searchValue="";
+      String searchValue = "";
       List<dynamic> keysContainingChars = [];
 
       for (int i = 0; i < 3; i++) {
-        
-
-        if (i==0){
-        searchValue=linearRegression;}
-
-        else if(i==1){
-          searchValue=randomForest;
-        }
-        else {
-          searchValue=naiveBytes;
+        if (i == 0) {
+          searchValue = linearRegression;
+        } else if (i == 1) {
+          searchValue = randomForest;
+        } else {
+          searchValue = naiveBytes;
         }
         // Your code here
         myMap.forEach((key, value) {
-        if (key.toString().contains(searchValue)) {
-          keysContainingChars.add(key);
-          print('Key: $key, Value: $value');
-        }
-      });
-      
+          if (key.toString().contains(searchValue)) {
+            keysContainingChars.add(key);
+            print('Key: $key, Value: $value');
+          }
+        });
       }
       print("I want to see $keysContainingChars");
-
-      
-      
 
       if (keysContainingChars.isNotEmpty) {
         print('Keys containing "$randomForest": $keysContainingChars');
@@ -123,6 +123,21 @@ class SymptomController extends GetxController {
       }
     }
   }
+
+  static Future<void> savePredictionData(String predictionData) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> predictionList = prefs.getStringList('predictionList') ?? [];
+    predictionList.add(predictionData);
+    await prefs.setStringList('predictionList', predictionList);
+  }
+
+   Future<List<String>> getPredictionData() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  List<String> predictionList = prefs.getStringList('predictionList') ?? [];
+  print("Got this data $predictionList");
+  return predictionList;
+}
+
 
   Future<void> tect(Detect detect) async {
     Response response = await detectRepo.deaeaseDetect(detect);

@@ -5,6 +5,7 @@ import 'package:cattle_desease/solution.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DropDown extends StatefulWidget {
   const DropDown({Key? key}) : super(key: key);
@@ -150,7 +151,7 @@ class _DropDownState extends State<DropDown> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () => Get.to(Notifications()),
+                    onTap: () => Get.to(SharedPreferencesPage()),
                     child: Container(
                       height: 42,
                       width: 42,
