@@ -131,13 +131,6 @@ class SymptomController extends GetxController {
     await prefs.setStringList('predictionList', predictionList);
   }
 
-   Future<List<String>> getPredictionData() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  List<String> predictionList = prefs.getStringList('predictionList') ?? [];
-  print("Got this data $predictionList");
-  return predictionList;
-}
-
 
   Future<void> tect(Detect detect) async {
     Response response = await detectRepo.deaeaseDetect(detect);

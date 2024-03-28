@@ -40,8 +40,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home:  LandingPage(),
-      home: DropDown(),
+      home:  LandingPage(),
+      // home: DropDown(),
     );
   }
 }
