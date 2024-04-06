@@ -63,7 +63,7 @@ class _SolutionState extends State<Solution> {
                     borderRadius: BorderRadius.circular(10)),
                 child: GetBuilder<SymptomController>(
                   builder: (detected) {
-                    return symptomController.options.isEmpty
+                    return symptomController.predicted.isEmpty
                         ? GestureDetector(
                             onTap: () => Get.to(Diagnose()),
                             child: Container(
@@ -71,7 +71,12 @@ class _SolutionState extends State<Solution> {
                             ),
                           )
                         : GestureDetector(
-                            onTap: () => Get.to(Diagnose()),
+                            // onTap: () => Get.to(Diagnose()),
+                            onTap: () {
+                               Get.to(Diagnose());
+                               symptomController.predicted.clear();
+                               
+                            },
                             child: ListView(
                               padding: const EdgeInsets.symmetric(
                                   vertical: 15, horizontal: 20),

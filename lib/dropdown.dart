@@ -1,4 +1,5 @@
 import 'package:cattle_desease/controllers.dart';
+import 'package:cattle_desease/new_prediction.dart';
 import 'package:cattle_desease/notifications.dart';
 import 'package:cattle_desease/profile.dart';
 import 'package:cattle_desease/solution.dart';
@@ -213,7 +214,8 @@ class _DropDownState extends State<DropDown> {
             GestureDetector(
               onTap: () {
                 symptomController.detect();
-                Get.to(Solution());
+                // Get.to(Solution());
+                Get.to(NewPrediction());
               },
               child: Container(
                 height: 70,

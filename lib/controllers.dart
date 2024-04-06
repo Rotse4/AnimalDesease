@@ -121,14 +121,16 @@ class SymptomController extends GetxController {
       } else {
         print("User orders not found");
       }
+      // predicted.clear();
     }
   }
 
-  static Future<void> savePredictionData(String predictionData) async {
+   Future<void> savePredictionData(String predictionData) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> predictionList = prefs.getStringList('predictionList') ?? [];
     predictionList.add(predictionData);
     await prefs.setStringList('predictionList', predictionList);
+    
   }
 
 

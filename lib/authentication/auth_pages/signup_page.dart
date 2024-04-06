@@ -28,24 +28,24 @@ class _SignUpPageState extends State<SignUpPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 200,
+              height: 80,
             ),
             const Text(
               '    Create Account',
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600,color: Colors.orange),
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600,color: Colors.brown),
             ),
             const Text(
               '         Enter creditials to create account',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300,color: Colors.black),
             ),
             const SizedBox(
-              height: 50,
+              height: 100,
             ),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
                         blurRadius: 10,
@@ -58,14 +58,14 @@ class _SignUpPageState extends State<SignUpPage> {
                     hintText: "Enter Username",
                     prefixIcon: const Icon(
                       Icons.email,
-                      color: Colors.orange,
+                      color: Colors.brown,
                     ),
                     focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide:
                             const BorderSide(color: Colors.white, width: 1.0)),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30))),
+                        borderRadius: BorderRadius.circular(10))),
               ),
             ),
             SizedBox(height: 10,),
@@ -73,7 +73,7 @@ class _SignUpPageState extends State<SignUpPage> {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
                         blurRadius: 10,
@@ -86,14 +86,14 @@ class _SignUpPageState extends State<SignUpPage> {
                     hintText: "Enter Email",
                     prefixIcon: const Icon(
                       Icons.email,
-                      color: Colors.orange,
+                      color: Colors.brown,
                     ),
                     focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide:
                             const BorderSide(color: Colors.white, width: 1.0)),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30))),
+                        borderRadius: BorderRadius.circular(10))),
               ),
             ),
             const SizedBox(
@@ -103,7 +103,7 @@ class _SignUpPageState extends State<SignUpPage> {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
                         blurRadius: 10,
@@ -117,17 +117,17 @@ class _SignUpPageState extends State<SignUpPage> {
                     hintText: "Enter Password",
                     prefixIcon: const Icon(
                       Icons.password,
-                      color: Colors.orange,
+                      color: Colors.brown,
                     ),
                     focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide:
                             const BorderSide(color: Colors.white, width: 1.0)),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30))),
+                        borderRadius: BorderRadius.circular(10))),
               ),
             ),
-            const SizedBox(height: 30,),
+            const SizedBox(height: 150,),
              Center(
                child: GestureDetector(
                  onTap: (){
@@ -139,7 +139,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   width: 160,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
-                    color: Colors.orange
+                    color: Colors.brown
                   ),
                   child: const Center(child: Text('Sign Up',style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.w700),)),
                  
