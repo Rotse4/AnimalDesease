@@ -17,6 +17,9 @@ class _MapPageState extends State<MapPage> {
   
   static const LatLng _pGooglePlex = LatLng(0.1264226, 37.7209075);
   static const LatLng _pApplePark = LatLng(1.1264226, 37.7209075);
+  static const LatLng _nchiru = LatLng(0.1263056, 37.220924);
+  static const LatLng _kianjahi = LatLng(0.1263056, 37.920924);
+  static const LatLng _kirintini = LatLng(0.1263056, 37.120924);
   LatLng? _currentP =null;
   LatLng? get currentP => _currentP;
 
@@ -39,7 +42,14 @@ class _MapPageState extends State<MapPage> {
               Marker(markerId: const MarkerId("_currentLocation"), icon: BitmapDescriptor.defaultMarker,
               position: _currentP??_pGooglePlex),
                const Marker(markerId: MarkerId("_destinationLocation"), icon: BitmapDescriptor.defaultMarker,
-              position: _pApplePark)
+              position: _pApplePark),
+               const Marker(markerId: MarkerId("Nchiru"), icon: BitmapDescriptor.defaultMarker,
+              position: _nchiru),
+              const Marker(markerId: MarkerId("kirintini"), icon: BitmapDescriptor.defaultMarker,
+              position: _kirintini),
+              const Marker(markerId: MarkerId("Kianjai"), icon: BitmapDescriptor.defaultMarker,
+              position: _kianjahi),
+
             } ,
             ),
           ),

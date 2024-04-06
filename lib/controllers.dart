@@ -16,7 +16,7 @@ class SymptomController extends GetxController {
     'schmallen_berg_virus':
         'Malformations affecting calves exposed to the virus in pregnancy may lead to calving difficulties. Excessive force must not be used as this may risk injury to both the cow and calf.',
     'Bovine Respiratory Disease (BRD)':
-        '\ufeffCeftiofur (Excede)\xa0Chlortetracycline (Aureomycin)\xa0Chlortetracycline/sulfamethazine (AS-700)',
+        'Ceftiofur (Excede)Chlortetracycline (Aureomycin)Chlortetracycline/sulfamethazine (AS-700)',
     'Mastitis': 'Penicillin, Ampicillin, Tetracyclin or Gentamycin',
     'Foot and Mouth Disease (FMD)': 'Potassium permanganate solution',
     'Bovine Viral Diarrhea (BVD)':
@@ -26,7 +26,7 @@ class SymptomController extends GetxController {
     'Leptospirosis': 'Doxycycline or Penicillin         ',
     'Infectious Bovine Rhinotracheitis (IBR)':
         'BoHV-1 glycoprotein E deleted mutant marker',
-    'Salmonellosis': ' Ciprofloxacin, Ceftriaxone.',
+    'fog_fever': ' Ciprofloxacin, Ceftriaxone.',
     'Bloat':
         '\xa0Simethicon, Lactase, Antacids, Laxatives, Bismuth salicylate, Prokinetics, Antispasmodics',
     'Listeriosis': 'Ampicillin alone or in combination with Gentamicin',

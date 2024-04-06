@@ -28,7 +28,10 @@ class _NewPredictionState extends State<NewPrediction> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       GestureDetector(
-                        onTap: () => Get.back(),
+                        onTap: () {
+                          symptomController.predicted.clear();
+                          Get.back();
+                        },
                         child: Container(
                           // padding: EdgeInsets.only(bottom: 20),
                           height: 30,
@@ -83,9 +86,9 @@ class _NewPredictionState extends State<NewPrediction> {
                           Container(
                             padding: EdgeInsets.symmetric(horizontal: 20),
                             child: Text(symptomController
-                                          .myMap[symptomController.linearRegression] !=
+                                          .myMap[symptomController.naiveBytes] !=
                                       null
-                                  ? "${symptomController.myMap[symptomController.randomForest]}"
+                                  ? "${symptomController.myMap[symptomController.naiveBytes]}"
                                   : "Diagnosis not found. Research is ongoing on how to diagnose this disease."),
                           ),
                           Expanded(
